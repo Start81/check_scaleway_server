@@ -51,12 +51,24 @@ Usage: check_scaleway_server.pl  -T <Token>  -z <Scaleway zone> -N <server name>
    Show details for command-line debugging (can repeat up to 3 times)
 ```
 
+sample  :
 
 ```bash
 #Get servers list 
-./check_scaleway_bdd.pl -T <Token> -r fr-par-1 -L
+./check_scaleway_bdd.pl -T <Token> -z fr-par-1 -L
 #get server state
 ./check_scaleway_bdd.pl -T <Token>  -z fr-par-1  -N <server_name>
 ./check_scaleway_bdd.pl -T <Token> -z fr-par-1  -i <uid>
 ```
+you may get  :
 
+```bash
+#list all server
+<?xml version="1.0" encoding="utf-8"?><data>
+<label name="MyServerName"id="UID"/>
+<label name="MyServerName"id="UID"/>
+<label name="MyServerName"id="UID"/>
+</data>
+#get server state
+OK - server status running name <server_name> id = <UID>  2 volume(s) ok
+```
